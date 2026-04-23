@@ -3,19 +3,6 @@ application:
 #    post-app-deploy: ./hooks/post-app-deploy.js
   runtimeManifest:
     packages:
-      starter-kit:
-        license: Apache-2.0
-        actions:
-          # Please DO NOT DELETE this action; future functionalities planned for upcoming starter kit releases may stop working.
-          info:
-            function: actions/starter-kit-info/index.js
-            web: 'yes'
-            runtime: nodejs:22
-            inputs:
-              LOG_LEVEL: debug
-            annotations:
-              require-adobe-auth: true
-              final: true
       #  ingestion:
       #    license: Apache-2.0
       #    actions:
