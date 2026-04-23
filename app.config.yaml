@@ -3,10 +3,6 @@ application:
 #    post-app-deploy: ./hooks/post-app-deploy.js
   runtimeManifest:
     packages:
-      #  ingestion:
-      #    license: Apache-2.0
-      #    actions:
-      #      $include: ./actions/ingestion/actions.config.yaml
       webhook:
         license: Apache-2.0
         actions:
