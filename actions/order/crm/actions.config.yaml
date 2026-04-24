@@ -1,6 +1,6 @@
 order-created:
   function: order-created/index.js
-  web: 'maybe'
+  web: 'no'
   runtime: nodejs:22
   inputs:
     LOG_LEVEL: debug
