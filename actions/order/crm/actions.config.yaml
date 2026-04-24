@@ -1,0 +1,12 @@
+order-created:
+  function: order-created/index.js
+  web: 'no'
+  runtime: nodejs:22
+  inputs:
+    LOG_LEVEL: debug
+    CRM_ENDPOINT_URL: $CRM_ENDPOINT_URL
+    CRM_API_KEY: $CRM_API_KEY
+    COMMERCE_EVENTING_HMAC_SECRET: $COMMERCE_EVENTING_HMAC_SECRET
+  annotations:
+    require-adobe-auth: true
+    final: true
