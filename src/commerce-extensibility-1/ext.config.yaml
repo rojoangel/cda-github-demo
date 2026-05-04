@@ -1,0 +1,4 @@
+runtimeManifest:
+  packages:
+    order-logger:
+      $include: ./order-logger/actions/actions.config.yaml

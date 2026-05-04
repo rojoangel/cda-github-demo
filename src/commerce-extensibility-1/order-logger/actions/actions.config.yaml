@@ -1,0 +1,9 @@
+order-logged-listener:
+  function: ./order-logged-listener/index.js
+  web: 'no'
+  runtime: nodejs:22
+  inputs:
+    LOG_LEVEL: $LOG_LEVEL
+  annotations:
+    require-adobe-auth: true
+    final: true
