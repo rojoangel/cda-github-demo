@@ -1,0 +1,6 @@
+runtimeManifest:
+  packages:
+    OrderEventLogger:
+      $include: ./order-event-logger/actions/actions.config.yaml
+pre-app-build:
+  - npx @adobe/aio-commerce-lib-app generate all
