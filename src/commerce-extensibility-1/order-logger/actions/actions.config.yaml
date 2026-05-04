@@ -1,0 +1,10 @@
+order-logger:
+  function: ./order-logger/index.js
+  web: "no"
+  runtime: nodejs:24
+  inputs:
+    LOG_LEVEL: $LOG_LEVEL
+    ADOBE_IO_EVENTS_CLIENT_SECRET: $ADOBE_IO_EVENTS_CLIENT_SECRET
+  annotations:
+    require-adobe-auth: true
+    final: true
