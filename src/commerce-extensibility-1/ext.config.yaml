@@ -1,0 +1,7 @@
+hooks:
+  pre-app-build: npx @adobe/aio-commerce-lib-app generate manifest
+
+runtimeManifest:
+  packages:
+    OrderLogger:
+      $include: ./order-logger/actions/actions.config.yaml
