@@ -1,0 +1,39 @@
+{
+  "eventing": {
+    "commerce": [
+      {
+        "events": [
+          {
+            "description": "Fires after a product is saved in Commerce",
+            "fields": [
+              {
+                "name": "product_id"
+              },
+              {
+                "name": "sku"
+              },
+              {
+                "name": "name"
+              }
+            ],
+            "label": "Product Saved",
+            "name": "plugin.magento.catalog.api.data.productinterface.save.after",
+            "runtimeActions": [
+              "product-logger/product-logger"
+            ]
+          }
+        ],
+        "provider": {
+          "description": "Product lifecycle events from Adobe Commerce",
+          "label": "Commerce Product Events"
+        }
+      }
+    ]
+  },
+  "metadata": {
+    "description": "Logs Commerce product IDs whenever a product is updated.",
+    "displayName": "Product Logger Extension",
+    "id": "product-logger-extension",
+    "version": "1.0.0"
+  }
+}
