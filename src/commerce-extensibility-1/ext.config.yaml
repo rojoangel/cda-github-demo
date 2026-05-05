@@ -1,0 +1,35 @@
+hooks:
+  pre-app-build: npx @adobe/aio-commerce-lib-app generate manifest
+
+operations:
+  workerProcess:
+    - type: action
+      impl: app-management/app-config
+    - type: action
+      impl: app-management/installation
+
+runtimeManifest:
+  packages:
+    order-event-logger:
+      license: Apache-2.0
+      actions:
+        $include: ./order-event-logger/actions/actions.config.yaml
+    app-management:
+      license: Apache-2.0
+      actions:
+        app-config:
+          function: .generated/actions/app-management/app-config.js
+          web: 'yes'
+          runtime: nodejs:22
+          annotations:
+            require-adobe-auth: true
+            final: true
+        installation:
+          function: .generated/actions/app-management/installation.js
+          web: 'yes'
+          runtime: nodejs:22
+          annotations:
+            require-adobe-auth: true
+            final: true
+          limits:
+            timeout: 600000
