@@ -1,0 +1,34 @@
+{
+  "eventing": {
+    "commerce": [
+      {
+        "events": [
+          {
+            "description": "Triggered when a product is saved in Adobe Commerce.",
+            "fields": [
+              {
+                "name": "sku"
+              }
+            ],
+            "label": "Product saved",
+            "name": "observer.catalog_product_save_after",
+            "runtimeActions": [
+              "product-log-extension/product-logger"
+            ]
+          }
+        ],
+        "provider": {
+          "description": "Logs product save events from Adobe Commerce.",
+          "key": "product-log-extension",
+          "label": "Product Log Extension"
+        }
+      }
+    ]
+  },
+  "metadata": {
+    "description": "Logs product save events for Adobe Commerce when products are saved.",
+    "displayName": "Product Log Extension",
+    "id": "product-log-extension",
+    "version": "1.0.0"
+  }
+}
