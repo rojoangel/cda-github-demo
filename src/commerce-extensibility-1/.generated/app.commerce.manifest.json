@@ -1,0 +1,34 @@
+{
+  "eventing": {
+    "commerce": [
+      {
+        "events": [
+          {
+            "description": "Triggered after an order is saved and committed.",
+            "fields": [
+              {
+                "name": "order.increment_id"
+              }
+            ],
+            "label": "Order Modified",
+            "name": "observer.sales_order_save_commit_after",
+            "runtimeActions": [
+              "order-logging/order-modified-handler"
+            ]
+          }
+        ],
+        "provider": {
+          "description": "Order modification event logging.",
+          "key": "order-logging-extension",
+          "label": "Order Logging Extension"
+        }
+      }
+    ]
+  },
+  "metadata": {
+    "description": "Logs Commerce order modification event order IDs to the runtime console.",
+    "displayName": "Order Logging Extension",
+    "id": "order-logging-extension",
+    "version": "1.0.0"
+  }
+}
