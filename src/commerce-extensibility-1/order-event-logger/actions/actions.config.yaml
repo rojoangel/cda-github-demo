@@ -1,0 +1,9 @@
+order-event-handler:
+  function: ./order-event-handler/index.js
+  runtime: nodejs:22
+  web: "no"
+  annotations:
+    require-adobe-auth: true
+    final: true
+  inputs:
+    LOG_LEVEL: $LOG_LEVEL
