@@ -1,0 +1,5 @@
+extensions:
+  dx/excshell/1:
+    $include: src/dx-excshell-1/ext.config.yaml
+  commerce/extensibility/1:
+    $include: src/commerce-extensibility-1/ext.config.yaml
