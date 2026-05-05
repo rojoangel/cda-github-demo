@@ -1,0 +1,9 @@
+save-logged:
+  function: ./save-logged/index.ts
+  runtime: nodejs:22
+  web: 'no'
+  inputs:
+    LOG_LEVEL: $LOG_LEVEL
+  annotations:
+    require-adobe-auth: true
+    final: true
