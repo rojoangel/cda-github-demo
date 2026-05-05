@@ -1,0 +1,9 @@
+product-save-logger:
+  function: ./product-save-logger/index.js
+  web: 'yes'
+  runtime: nodejs:22
+  inputs:
+    LOG_LEVEL: $LOG_LEVEL
+  annotations:
+    require-adobe-auth: true
+    final: true

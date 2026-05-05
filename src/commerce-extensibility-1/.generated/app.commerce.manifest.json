@@ -1,0 +1,33 @@
+{
+  "eventing": {
+    "commerce": [
+      {
+        "events": [
+          {
+            "description": "Triggered after a product is saved.",
+            "fields": [
+              {
+                "name": "product_id"
+              }
+            ],
+            "label": "Product Save After",
+            "name": "observer.catalog_product_save_after",
+            "runtimeActions": [
+              "product-save-logger/product-save-logger"
+            ]
+          }
+        ],
+        "provider": {
+          "description": "Product save events from Adobe Commerce",
+          "label": "Catalog Events"
+        }
+      }
+    ]
+  },
+  "metadata": {
+    "description": "Logs product save events for observer.catalog_product_save_after.",
+    "displayName": "Product Save Logger",
+    "id": "product-save-logger",
+    "version": "1.0.0"
+  }
+}
