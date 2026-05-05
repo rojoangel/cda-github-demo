@@ -1,0 +1,34 @@
+{
+  "eventing": {
+    "commerce": [
+      {
+        "events": [
+          {
+            "description": "Fires after an order is saved in Commerce",
+            "fields": [
+              {
+                "name": "increment_id"
+              }
+            ],
+            "label": "Order Saved",
+            "name": "observer.sales_order_save_commit_after",
+            "runtimeActions": [
+              "OrderLogger/order-logged"
+            ]
+          }
+        ],
+        "provider": {
+          "description": "Logs order save events from Commerce",
+          "key": "order-logger-extension",
+          "label": "Order Logger"
+        }
+      }
+    ]
+  },
+  "metadata": {
+    "description": "Logs order increment IDs from the sales_order_save_commit_after observer event.",
+    "displayName": "Order Logger Extension",
+    "id": "order-logger-extension",
+    "version": "1.0.0"
+  }
+}
