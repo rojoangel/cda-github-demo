@@ -1,0 +1,9 @@
+order-saved-logger:
+  function: ./order-saved-logger/index.js
+  web: 'no'
+  runtime: nodejs:22
+  annotations:
+    require-adobe-auth: true
+    final: true
+  inputs:
+    LOG_LEVEL: info
